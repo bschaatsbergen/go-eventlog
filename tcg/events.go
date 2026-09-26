@@ -103,6 +103,10 @@ const (
 	EFIVariableBoot2           EventType = 0x8000000C
 	EFIHCRTMEvent              EventType = 0x80000010
 	EFIVariableAuthority       EventType = 0x800000E0
+	EFISPDMFirmwareBlob        EventType = 0x800000E1
+	EFISPDMFirmwareConfig      EventType = 0x800000E2
+	EFISPDMDevicePolicy        EventType = 0x800000E3
+	EFISPDMDeviceAuthority     EventType = 0x800000E4
 )
 
 // GoogleDRTMEvent is a custom DRTM event type for Google measurements.
@@ -145,6 +149,10 @@ var EventTypeNames = map[EventType]string{
 	EFIVariableBoot2:           "EFI Variable Boot2",
 	EFIHCRTMEvent:              "EFI H-CRTM Event",
 	EFIVariableAuthority:       "EFI Variable Authority",
+	EFISPDMFirmwareBlob:        "EFI SPDM Firmware Blob",
+	EFISPDMFirmwareConfig:      "EFI SPDM Firmware Config",
+	EFISPDMDevicePolicy:        "EFI SPDM Device Policy",
+	EFISPDMDeviceAuthority:     "EFI SPDM Device Authority",
 
 	// Custom event type, not in TCG spec.
 	GoogleDRTMEvent: "Google DRTM Event",
@@ -185,6 +193,10 @@ var eventTypeStrings = map[uint32]string{
 	0x8000000C: "EV_EFI_VARIABLE_BOOT2",
 	0x80000010: "EV_EFI_HCRTM_EVENT",
 	0x800000E0: "EV_EFI_VARIABLE_AUTHORITY",
+	0x800000E1: "EV_EFI_SPDM_FIRMWARE_BLOB",
+	0x800000E2: "EV_EFI_SPDM_FIRMWARE_CONFIG",
+	0x800000E3: "EV_EFI_SPDM_DEVICE_POLICY",
+	0x800000E4: "EV_EFI_SPDM_DEVICE_AUTHORITY",
 
 	// Custom event type, not in TCG spec.
 	0x10000000: "EV_GOOGLE_DRTM_EVENT",
